@@ -9,7 +9,7 @@
   "notes": "Tariffa convenzionata su richiesta.",
   "website": "https://example.com",
   "booking": "https://example.com/prenota",
-  "icon": "hotel",
+  "icon": "bed",
   "color": "blue"
 },
   {
@@ -22,6 +22,8 @@
     "notes": "Parcheggio vicino. Colazione inclusa.",
     "website": "https://example.com",
     "booking": "https://example.com/prenota"
+    "icon": "home",
+    "color": "green"
   },
   {
     "id": "apt-1",
@@ -33,6 +35,9 @@
     "notes": "Ideale per famiglie. Cucina attrezzata.",
     "website": "https://example.com",
     "booking": "https://example.com/prenota"
+    "icon": "building",
+    "color": "red"
   }
 
 ]
+
