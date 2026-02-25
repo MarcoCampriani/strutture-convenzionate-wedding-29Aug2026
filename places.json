@@ -6,10 +6,10 @@
     "lat": 45.0703,
     "lng": 7.6869,
     "address": "Esempio: Via Roma 1, Torino",
-    "notes": "Tariffa convenzionata su richiesta. Check-in dopo le 14:00.",
+    "notes": "Tariffa convenzionata su richiesta. Check-in dopo le 14:00.",{"
     "website": "https://example.com",
-    "booking": "https://example.com/prenota"
-    "iconURL": "./villa-cimena.png"
+    "booking": "https://example.com/prenota",
+    "iconUrl": "./villa-cimena.png"
   },
   {
     "id": "bnb-1",
@@ -20,7 +20,8 @@
     "address": "Esempio: Piazza XX Settembre, Chivasso",
     "notes": "Parcheggio vicino. Colazione inclusa.",
     "website": "https://example.com",
-    "booking": "https://example.com/prenota"
+    "booking": "https://example.com/prenota",
+    "iconUrl": "./villa-cimena.png"
   },
   {
     "id": "apt-1",
@@ -31,9 +32,7 @@
     "address": "Esempio: Via Nizza 200, Torino",
     "notes": "Ideale per famiglie. Cucina attrezzata.",
     "website": "https://example.com",
-    "booking": "https://example.com/prenota"
+    "booking": "https://example.com/prenota",
+    "iconUrl": "./villa-cimena.png"
   }
 ]
-
-
-
