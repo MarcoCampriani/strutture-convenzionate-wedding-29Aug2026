@@ -9,6 +9,7 @@
     "notes": "Tariffa convenzionata su richiesta. Check-in dopo le 14:00.",
     "website": "https://example.com",
     "booking": "https://example.com/prenota"
+    "iconURL": "./villa-cimena.png"
   },
   {
     "id": "bnb-1",
@@ -33,5 +34,6 @@
     "booking": "https://example.com/prenota"
   }
 ]
+
 
 
