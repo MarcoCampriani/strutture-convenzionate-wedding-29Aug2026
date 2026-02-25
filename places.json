@@ -1,14 +1,14 @@
 [
   {
     "id": "hotel-1",
-    "name": "Hotel Torino Centro",
+    "name": "DUPARC Contemporary Suites",
     "city": "Torino",
-    "lat": 45.0703,
-    "lng": 7.6869,
-    "address": "Esempio: Via Roma 1, Torino",
-    "notes": "Tariffa convenzionata su richiesta. Check-in dopo le 14:00.",
-    "website": "https://example.com",
-    "booking": "https://example.com/prenota",
+    "lat": 45.04795511175638,
+    "lng":  7.680202215339516,
+    "address": "Corso Massimo d'Azeglio, 21, 10126 Torino TO, Italia",
+    "notes": "Codice sconto per i nostri invitati:MV29826 - 15% di sconto sulle tariffe online. Inserire il codice in fase di prenotazione online dal link in descrizione o indicarlo nella richiesta email o telefonica alla struttura. Codice valido per le notti dal 25/08 al 01/09, per prenotaqzioni eseguite entro il 30/06/2026. Bambini fino a 2 anni gratuiti ma da segnalare. Bambini dai 3 ai 12 anni scontati. Cancellazione gratuita entro le 23.59 del giorno antecedente all'arrivo. SPA ed altri servizi dell'hotel prenotabili od inclusi a seconda della tariffa",
+    "website": "https://www.duparcsuites.com/",
+    "booking": "https://www.duparcsuites.com/book/dates-of-stay",
     "iconUrl": "./marker-hotel.svg"
   },
   {
