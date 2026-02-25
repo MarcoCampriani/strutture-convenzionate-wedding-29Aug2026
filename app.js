@@ -1,4 +1,4 @@
-const MAP_CENTER = [45.11, 7.78]; // circa tra Torino e Chivasso
+const MAP_CENTER = [45.11, 7.78];
 const MAP_ZOOM = 11;
 
 let map;
@@ -48,7 +48,6 @@ function popupHtml(p) {
 function initMap() {
   map = L.map("map", { scrollWheelZoom: true }).setView(MAP_CENTER, MAP_ZOOM);
 
-  // Tile layer OpenStreetMap
   L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
     maxZoom: 19,
     attribution: "&copy; OpenStreetMap contributors"
@@ -66,12 +65,11 @@ function addMarkers(data) {
   clearMarkers();
 
   data.forEach(p => {
-    // Crea un'icona personalizzata da immagine
     const markerIcon = L.icon({
-      iconUrl: p.iconUrl || './villa-cimena.png',
-      iconSize: [40, 40],
-      iconAnchor: [20, 40],      // Centro in basso
-      popupAnchor: [0, -40]
+      iconUrl: p.iconUrl || './hotel-marker.svg',
+      iconSize: [50, 70],
+      iconAnchor: [25, 70],
+      popupAnchor: [0, -70]
     });
 
     const marker = L.marker([p.lat, p.lng], { 
@@ -79,11 +77,10 @@ function addMarkers(data) {
       title: p.name
     }).addTo(markersLayer);
 
-    // Aggiungi etichetta SOTTO il marker (non sopra)
     const label = L.tooltip({
       permanent: true,
-      direction: 'bottom',        // ← CAMBIATO: era 'top', ora 'bottom'
-      offset: [0, 8],             // ← AGGIUNTO: spazio dal marker
+      direction: 'bottom',
+      offset: [0, 10],
       className: 'marker-label'
     })
     .setContent(p.name)
@@ -102,7 +99,6 @@ function addMarkers(data) {
   const bounds = L.latLngBounds(data.map(p => [p.lat, p.lng]));
   if (data.length > 0) map.fitBounds(bounds.pad(0.15));
 }
-
 
 function renderList(data) {
   const list = document.getElementById("list");
@@ -165,7 +161,5 @@ document.addEventListener("DOMContentLoaded", async () => {
   const search = document.getElementById("search");
   search.addEventListener("input", () => applySearch());
 });
-
-
 
 
