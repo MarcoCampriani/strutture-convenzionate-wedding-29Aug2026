@@ -67,9 +67,9 @@ function addMarkers(data) {
   data.forEach(p => {
     const markerIcon = L.icon({
       iconUrl: p.iconUrl || './hotel-marker.svg',
-      iconSize: [50, 70],
-      iconAnchor: [25, 70],
-      popupAnchor: [0, -70]
+      iconSize: [38, 52],
+      iconAnchor: [19, 52],
+      popupAnchor: [0, -52]
     });
 
     const marker = L.marker([p.lat, p.lng], { 
@@ -161,5 +161,6 @@ document.addEventListener("DOMContentLoaded", async () => {
   const search = document.getElementById("search");
   search.addEventListener("input", () => applySearch());
 });
+
 
 
