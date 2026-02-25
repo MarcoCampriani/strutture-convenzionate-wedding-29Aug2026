@@ -1,17 +1,15 @@
 [
-{
-  "id": "hotel-1",
-  "name": "Hotel Torino Centro",
-  "city": "Torino",
-  "lat": 45.0703,
-  "lng": 7.6869,
-  "address": "Via Roma 1, Torino",
-  "notes": "Tariffa convenzionata su richiesta.",
-  "website": "https://example.com",
-  "booking": "https://example.com/prenota",
-  "icon": "bed",
-  "color": "blue"
-},
+  {
+    "id": "hotel-1",
+    "name": "Hotel Torino Centro",
+    "city": "Torino",
+    "lat": 45.0703,
+    "lng": 7.6869,
+    "address": "Esempio: Via Roma 1, Torino",
+    "notes": "Tariffa convenzionata su richiesta. Check-in dopo le 14:00.",
+    "website": "https://example.com",
+    "booking": "https://example.com/prenota"
+  },
   {
     "id": "bnb-1",
     "name": "B&B Chivasso",
@@ -22,8 +20,6 @@
     "notes": "Parcheggio vicino. Colazione inclusa.",
     "website": "https://example.com",
     "booking": "https://example.com/prenota"
-    "icon": "home",
-    "color": "green"
   },
   {
     "id": "apt-1",
@@ -35,9 +31,7 @@
     "notes": "Ideale per famiglie. Cucina attrezzata.",
     "website": "https://example.com",
     "booking": "https://example.com/prenota"
-    "icon": "building",
-    "color": "red"
   }
-
 ]
+
 
