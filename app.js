@@ -68,10 +68,10 @@ function addMarkers(data) {
   data.forEach(p => {
     // Crea un'icona personalizzata da immagine
     const markerIcon = L.icon({
-      iconUrl: p.iconUrl || './villa-cimena.png',  // Percorso dell'immagine
-      iconSize: [40, 40],        // Dimensioni dell'icona [larghezza, altezza]
-      iconAnchor: [20, 40],      // Punto di ancoraggio (centro in basso)
-      popupAnchor: [0, -40]      // Dove appare il popup
+      iconUrl: p.iconUrl || './villa-cimena.png',
+      iconSize: [40, 40],
+      iconAnchor: [20, 40],      // Centro in basso
+      popupAnchor: [0, -40]
     });
 
     const marker = L.marker([p.lat, p.lng], { 
@@ -79,10 +79,11 @@ function addMarkers(data) {
       title: p.name
     }).addTo(markersLayer);
 
-    // Aggiungi un'etichetta accanto al marker
+    // Aggiungi etichetta SOTTO il marker (non sopra)
     const label = L.tooltip({
       permanent: true,
-      direction: 'top',
+      direction: 'bottom',        // ← CAMBIATO: era 'top', ora 'bottom'
+      offset: [0, 8],             // ← AGGIUNTO: spazio dal marker
       className: 'marker-label'
     })
     .setContent(p.name)
@@ -101,6 +102,7 @@ function addMarkers(data) {
   const bounds = L.latLngBounds(data.map(p => [p.lat, p.lng]));
   if (data.length > 0) map.fitBounds(bounds.pad(0.15));
 }
+
 
 function renderList(data) {
   const list = document.getElementById("list");
@@ -163,6 +165,7 @@ document.addEventListener("DOMContentLoaded", async () => {
   const search = document.getElementById("search");
   search.addEventListener("input", () => applySearch());
 });
+
 
 
 
