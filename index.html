@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Mappa strutture convenzionate</title>
+
+  <!-- Leaflet CSS/JS (CDN ufficialmente consigliati) -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" crossorigin="" />
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" crossorigin=""></script>
+
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="topbar__title">Mappa strutture convenzionate</div>
+    <div class="topbar__subtitle">Torino • Chivasso</div>
+  </header>
+
+  <main class="layout">
+    <aside class="sidebar">
+      <div class="sidebar__controls">
+        <input id="search" class="input" type="search" placeholder="Cerca per nome o città…" />
+        <div class="hint">Clicca un elemento o un marker per vedere i dettagli.</div>
+      </div>
+      <div id="list" class="list"></div>
+    </aside>
+
+    <section class="mapwrap">
+      <div id="map"></div>
+    </section>
+  </main>
+
+  <script src="./app.js"></script>
+</body>
+</html>

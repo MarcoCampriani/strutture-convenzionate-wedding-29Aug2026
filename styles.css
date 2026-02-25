@@ -1,0 +1,93 @@
+:root {
+  --bg: #0b0c10;
+  --panel: #12141a;
+  --text: #e9eef7;
+  --muted: #aab3c2;
+  --border: rgba(255,255,255,0.10);
+  --shadow: 0 10px 30px rgba(0,0,0,0.35);
+}
+
+* { box-sizing: border-box; }
+html, body { height: 100%; }
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+}
+
+.topbar {
+  padding: 14px 16px;
+  border-bottom: 1px solid var(--border);
+  background: rgba(18,20,26,0.8);
+  backdrop-filter: blur(10px);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+.topbar__title { font-weight: 700; }
+.topbar__subtitle { color: var(--muted); font-size: 14px; margin-top: 2px; }
+
+.layout {
+  height: calc(100% - 57px);
+  display: grid;
+  grid-template-columns: 360px 1fr;
+}
+
+.sidebar {
+  border-right: 1px solid var(--border);
+  background: var(--panel);
+  overflow: auto;
+}
+.sidebar__controls {
+  padding: 14px;
+  border-bottom: 1px solid var(--border);
+  position: sticky;
+  top: 0;
+  background: var(--panel);
+  z-index: 5;
+}
+.input {
+  width: 100%;
+  padding: 10px 12px;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  background: rgba(255,255,255,0.04);
+  color: var(--text);
+  outline: none;
+}
+.hint { margin-top: 10px; color: var(--muted); font-size: 13px; }
+
+.list { padding: 10px; display: grid; gap: 10px; }
+.card {
+  padding: 12px;
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  background: rgba(255,255,255,0.03);
+  box-shadow: var(--shadow);
+  cursor: pointer;
+}
+.card:hover { background: rgba(255,255,255,0.06); }
+.card__title { font-weight: 650; }
+.card__meta { color: var(--muted); font-size: 13px; margin-top: 4px; }
+.card__addr { color: var(--muted); font-size: 13px; margin-top: 6px; }
+
+.mapwrap { position: relative; }
+#map { height: 100%; width: 100%; }
+
+.leaflet-popup-content-wrapper { border-radius: 14px; }
+.popup h3 { margin: 0 0 6px; }
+.popup .p { margin: 6px 0; }
+.popup .muted { color: #5b6472; font-size: 13px; }
+.popup .links { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 10px; }
+.popup a.btn {
+  display: inline-block;
+  padding: 8px 10px;
+  border-radius: 10px;
+  border: 1px solid rgba(0,0,0,0.1);
+  text-decoration: none;
+}
+@media (max-width: 900px) {
+  .layout { grid-template-columns: 1fr; grid-template-rows: 320px 1fr; }
+  .sidebar { border-right: none; border-bottom: 1px solid var(--border); }
+}
