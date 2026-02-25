@@ -66,7 +66,29 @@ function addMarkers(data) {
   clearMarkers();
 
   data.forEach(p => {
-    const marker = L.marker([p.lat, p.lng]).addTo(markersLayer);
+    // Crea un'icona personalizzata da immagine
+    const markerIcon = L.icon({
+      iconUrl: p.iconUrl || './villa-cimena.png',  // Percorso dell'immagine
+      iconSize: [40, 40],        // Dimensioni dell'icona [larghezza, altezza]
+      iconAnchor: [20, 40],      // Punto di ancoraggio (centro in basso)
+      popupAnchor: [0, -40]      // Dove appare il popup
+    });
+
+    const marker = L.marker([p.lat, p.lng], { 
+      icon: markerIcon,
+      title: p.name
+    }).addTo(markersLayer);
+
+    // Aggiungi un'etichetta accanto al marker
+    const label = L.tooltip({
+      permanent: true,
+      direction: 'top',
+      className: 'marker-label'
+    })
+    .setContent(p.name)
+    .setLatLng([p.lat, p.lng])
+    .addTo(markersLayer);
+
     marker.bindPopup(popupHtml(p), { maxWidth: 320 });
 
     marker.on("click", () => {
@@ -76,7 +98,6 @@ function addMarkers(data) {
     markerById.set(p.id, marker);
   });
 
-  // zoom per includere tutti i marker
   const bounds = L.latLngBounds(data.map(p => [p.lat, p.lng]));
   if (data.length > 0) map.fitBounds(bounds.pad(0.15));
 }
@@ -142,5 +163,6 @@ document.addEventListener("DOMContentLoaded", async () => {
   const search = document.getElementById("search");
   search.addEventListener("input", () => applySearch());
 });
+
 
 
