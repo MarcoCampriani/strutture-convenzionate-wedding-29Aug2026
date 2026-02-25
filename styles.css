@@ -90,21 +90,4 @@ body {
 @media (max-width: 900px) {
   .layout { grid-template-columns: 1fr; grid-template-rows: 320px 1fr; }
   .sidebar { border-right: none; border-bottom: 1px solid var(--border); }
-
-  /* Stile per le etichette dei marker */
-.marker-label {
-  background-color: rgba(12, 13, 16, 0.9) !important;
-  border: 1px solid rgba(255, 255, 255, 0.2) !important;
-  color: var(--text) !important;
-  padding: 6px 10px !important;
-  border-radius: 8px !important;
-  font-size: 12px !important;
-  font-weight: 600 !important;
-  white-space: nowrap !important;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3) !important;
-  pointer-events: none !important;
-}
-
-.marker-label::before {
-  display: none !important;
 }
