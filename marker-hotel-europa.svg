@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 120" width="38" height="52">
+  <!-- goccia blu notte -->
+  <path d="M50 14 C30 14, 16 30, 16 50 C16 75, 50 118, 50 118 C50 118, 84 75, 84 50 C84 30, 70 14, 50 14 Z"
+        fill="#0E1A2B"/>
+
+  <defs>
+    <clipPath id="clipCircle">
+      <circle cx="50" cy="50" r="16"/>
+    </clipPath>
+  </defs>
+
+  <!-- bordo bianco -->
+  <circle cx="50" cy="50" r="16" fill="white"/>
+
+  <!-- immagine ritagliata nel cerchio -->
+  <image
+    href="./logo-hotel-europa.jpg"
+    x="34" y="34" width="32" height="32"
+    preserveAspectRatio="xMidYMid slice"
+    clip-path="url(#clipCircle)"
+  />
+</svg>
