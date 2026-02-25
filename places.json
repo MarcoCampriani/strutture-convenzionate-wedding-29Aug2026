@@ -9,7 +9,7 @@
     "notes": "Tariffa convenzionata su richiesta. Check-in dopo le 14:00.",
     "website": "https://example.com",
     "booking": "https://example.com/prenota",
-    "iconUrl": "./hotel-marker.svg"
+    "iconUrl": "./marker-hotel-europa.svg"
   },
   {
     "id": "bnb-1",
