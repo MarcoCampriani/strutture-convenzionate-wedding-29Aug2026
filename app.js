@@ -70,7 +70,8 @@ function addMarkers(data) {
     const markerIcon = L.AwesomeMarkers.icon({
       icon: p.icon || "info",
       prefix: "fa",
-      markerColor: p.color || "blue"
+      markerColor: p.color || "blue",
+      iconColor: "white"
     });
 
     const marker = L.marker([p.lat, p.lng], { 
@@ -164,3 +165,4 @@ document.addEventListener("DOMContentLoaded", async () => {
   search.addEventListener("input", () => applySearch());
 
 });
+
