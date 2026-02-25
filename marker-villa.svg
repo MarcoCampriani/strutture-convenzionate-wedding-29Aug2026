@@ -7,7 +7,7 @@
     </filter>
   </defs>
 
-  <!-- goccia piena oro tenue -->
+  <!-- goccia piena oro -->
   <path d="M50 14
            C30 14,16 30,16 50
            C16 75,50 118,50 118
@@ -16,7 +16,7 @@
         fill="#C6A756"
         filter="url(#shadow)"/>
 
-  <!-- villa bianca -->
+  <!-- villa bianca ingrandita -->
   <g stroke="white"
      stroke-width="3"
      fill="none"
@@ -24,13 +24,13 @@
      stroke-linejoin="round">
 
     <!-- tetto -->
-    <polygon points="35,54 50,42 65,54"/>
+    <polygon points="30,56 50,40 70,56"/>
 
     <!-- corpo -->
-    <rect x="38" y="54" width="24" height="16" rx="2"/>
+    <rect x="34" y="56" width="32" height="18" rx="2"/>
 
     <!-- porta -->
-    <rect x="47" y="60" width="6" height="10" rx="1"/>
+    <rect x="46" y="62" width="8" height="12" rx="1"/>
 
   </g>
 </svg>
