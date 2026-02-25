@@ -1,15 +1,17 @@
 [
-  {
-    "id": "hotel-1",
-    "name": "Hotel Torino Centro",
-    "city": "Torino",
-    "lat": 45.0703,
-    "lng": 7.6869,
-    "address": "Esempio: Via Roma 1, Torino",
-    "notes": "Tariffa convenzionata su richiesta. Check-in dopo le 14:00.",
-    "website": "https://example.com",
-    "booking": "https://example.com/prenota"
-  },
+{
+  "id": "hotel-1",
+  "name": "Hotel Torino Centro",
+  "city": "Torino",
+  "lat": 45.0703,
+  "lng": 7.6869,
+  "address": "Via Roma 1, Torino",
+  "notes": "Tariffa convenzionata su richiesta.",
+  "website": "https://example.com",
+  "booking": "https://example.com/prenota",
+  "icon": "hotel",
+  "color": "blue"
+},
   {
     "id": "bnb-1",
     "name": "B&B Chivasso",
@@ -32,4 +34,5 @@
     "website": "https://example.com",
     "booking": "https://example.com/prenota"
   }
+
 ]
