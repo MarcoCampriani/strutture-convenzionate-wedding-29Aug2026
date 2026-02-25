@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 120" width="38" height="52">
+  <defs>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="2" stdDeviation="2.5"
+                    flood-color="#000000"
+                    flood-opacity="0.25"/>
+    </filter>
+  </defs>
+
+  <!-- goccia solo contorno -->
+  <path d="M50 14
+           C30 14,16 30,16 50
+           C16 75,50 118,50 118
+           C50 118,84 75,84 50
+           C84 30,70 14,50 14 Z"
+        fill="none"
+        stroke="#0D1B2A"
+        stroke-width="3.5"
+        stroke-linejoin="round"
+        filter="url(#shadow)"/>
+
+  <!-- H corsiva -->
+  <text x="50"
+        y="68"
+        font-size="34"
+        text-anchor="middle"
+        fill="#0D1B2A"
+        font-family="Georgia, Times, serif"
+        font-style="italic">
+        H
+  </text>
+</svg>
