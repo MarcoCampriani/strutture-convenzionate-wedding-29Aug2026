@@ -66,7 +66,29 @@ function addMarkers(data) {
   clearMarkers();
 
   data.forEach(p => {
-    const marker = L.marker([p.lat, p.lng]).addTo(markersLayer);
+    // Crea un marker con icona personalizzata
+    const markerIcon = L.AwesomeMarkers.icon({
+      icon: p.icon || "info",
+      prefix: "fa",
+      markerColor: p.color || "blue"
+    });
+
+    const marker = L.marker([p.lat, p.lng], { 
+      icon: markerIcon,
+      title: p.name,  // ← Aggiunto: mostra il nome al passaggio del mouse
+      alt: p.name
+    }).addTo(markersLayer);
+
+    // Aggiungi un'etichetta accanto al marker
+    const label = L.tooltip({
+      permanent: true,
+      direction: 'top',
+      className: 'marker-label'
+    })
+    .setContent(p.name)
+    .setLatLng([p.lat, p.lng])
+    .addTo(markersLayer);
+
     marker.bindPopup(popupHtml(p), { maxWidth: 320 });
 
     marker.on("click", () => {
@@ -76,7 +98,6 @@ function addMarkers(data) {
     markerById.set(p.id, marker);
   });
 
-  // zoom per includere tutti i marker
   const bounds = L.latLngBounds(data.map(p => [p.lat, p.lng]));
   if (data.length > 0) map.fitBounds(bounds.pad(0.15));
 }
@@ -141,4 +162,5 @@ document.addEventListener("DOMContentLoaded", async () => {
 
   const search = document.getElementById("search");
   search.addEventListener("input", () => applySearch());
+
 });
