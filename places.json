@@ -9,7 +9,7 @@
     "notes": "Tariffa convenzionata su richiesta. Check-in dopo le 14:00.",
     "website": "https://example.com",
     "booking": "https://example.com/prenota",
-    "iconUrl": "./villa-cimena.png"
+    "iconUrl": "./hotel-marker.svg"
   },
   {
     "id": "bnb-1",
@@ -21,7 +21,7 @@
     "notes": "Parcheggio vicino. Colazione inclusa.",
     "website": "https://example.com",
     "booking": "https://example.com/prenota",
-    "iconUrl": "./villa-cimena.png"
+    "iconUrl": "./hotel-marker.svg"
   },
   {
     "id": "apt-1",
@@ -33,6 +33,6 @@
     "notes": "Ideale per famiglie. Cucina attrezzata.",
     "website": "https://example.com",
     "booking": "https://example.com/prenota",
-    "iconUrl": "./villa-cimena.png"
+    "iconUrl": "./hotel-marker.svg"
   }
 ]
